@@ -1,0 +1,25 @@
+$Softred: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+$Darkbrown: hsl(25, 47%, 15%);
+$Mediumbrown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Verypaleorange: hsl(33, 100%, 98%);
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/dm-sans-v11-latin-regular.woff2') format('woff2'), 
+         url('../fonts/dm-sans-v11-latin-regular.woff') format('woff'); 
+  }
+  /* dm-sans-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/dm-sans-v11-latin-500.woff2') format('woff2'),
+         url('../fonts/dm-sans-v11-latin-500.woff') format('woff'); 
+}

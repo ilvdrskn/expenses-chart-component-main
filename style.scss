@@ -1,0 +1,158 @@
+@import "variablesAndFonts";
+
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+
+body {
+    font-size: 18px;
+    font-family: 'DM Sans';
+    background-color: $Cream;
+    max-width: 1440px;
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.foot {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    justify-content: flex-start;
+}
+
+.main {
+    justify-self: center;
+    width: 40%;
+}
+
+.balace {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: $Softred;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.textBalance {
+    color: #fff;
+
+    .balanceHeader {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .balanceCount {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+.info {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.2em 1.8em;
+}
+
+.last7days {
+    margin-bottom: 30px;
+}
+
+.last7daysHeading {
+    margin-bottom: 50px;
+    color: $Darkbrown;
+}
+
+.weekday {
+    position: relative;
+    background-color: $Softred;
+    border-radius: 5px;
+    height: 50px;
+
+    .day {
+        position: absolute;
+        top: 100%;
+    }
+
+    &:hover {
+        background-color: $Cyan;
+        cursor: pointer;
+
+        .overlay {
+            display: block;
+            position: absolute;
+            bottom: 120%;
+            background-color: $Darkbrown;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            transform: translate(0);
+        }
+    }
+
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    justify-content: space-between;
+}
+
+.mon {height: 35px; transform: translateY(52px);}
+.tue {height: 70px; transform: translateY(19px);}
+.wed {height: 102px; transform: translateY(-11px);}
+.thu {height: 62px; transform: translateY(26px);}
+.fri {height: 46px; transform: translateY(42px);}
+.sat {height: 86px;}
+.sun {height: 50px; transform: translateY(32px);}
+
+.total {
+    border-top: 1px solid $Mediumbrown;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalHeading {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: $Mediumbrown;
+}
+
+.totalinfo {
+    font-size: 30px;
+    color: $Darkbrown;
+    font-weight: 700;
+}
+
+.totalText1 {
+    align-self: flex-end;
+    color: $Mediumbrown;
+}
+
+.percent {
+    color: $Darkbrown;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 400px) {
+
+    body {
+        min-width: 400px;
+    }
+    .table {
+        grid-template-columns: repeat(7, 10px);
+        justify-content: space-between;
+    }
+}
+

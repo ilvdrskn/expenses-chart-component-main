@@ -1,0 +1,227 @@
+/* dm-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dm-sans-v11-latin-regular.woff2") format("woff2"), url("../fonts/dm-sans-v11-latin-regular.woff") format("woff");
+}
+/* dm-sans-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/dm-sans-v11-latin-500.woff2") format("woff2"), url("../fonts/dm-sans-v11-latin-500.woff") format("woff");
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "DM Sans";
+  background-color: hsl(27deg, 66%, 92%);
+  max-width: 1440px;
+  min-width: 375px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 100px;
+}
+
+.foot {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 40%;
+}
+
+.balace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.textBalance {
+  color: #fff;
+}
+.textBalance .balanceHeader {
+  font-size: 14px;
+  font-weight: 400;
+}
+.textBalance .balanceCount {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.info {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.2em 1.8em;
+}
+
+.last7days {
+  margin-bottom: 30px;
+}
+
+.last7daysHeading {
+  margin-bottom: 50px;
+  color: hsl(25deg, 47%, 15%);
+}
+
+.weekday {
+  position: relative;
+  background-color: hsl(10deg, 79%, 65%);
+  border-radius: 5px;
+  height: 50px;
+}
+.weekday .day {
+  position: absolute;
+  top: 100%;
+}
+.weekday:hover {
+  background-color: hsl(186deg, 34%, 60%);
+  cursor: pointer;
+}
+.weekday:hover .overlay {
+  display: block;
+  position: absolute;
+  bottom: 120%;
+  background-color: hsl(25deg, 47%, 15%);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.table {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[7];
+  grid-template-columns: repeat(7, 50px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mon {
+  height: 35px;
+  -webkit-transform: translateY(52px);
+          transform: translateY(52px);
+}
+
+.tue {
+  height: 70px;
+  -webkit-transform: translateY(19px);
+          transform: translateY(19px);
+}
+
+.wed {
+  height: 102px;
+  -webkit-transform: translateY(-11px);
+          transform: translateY(-11px);
+}
+
+.thu {
+  height: 62px;
+  -webkit-transform: translateY(26px);
+          transform: translateY(26px);
+}
+
+.fri {
+  height: 46px;
+  -webkit-transform: translateY(42px);
+          transform: translateY(42px);
+}
+
+.sat {
+  height: 86px;
+}
+
+.sun {
+  height: 50px;
+  -webkit-transform: translateY(32px);
+          transform: translateY(32px);
+}
+
+.total {
+  border-top: 1px solid hsl(28deg, 10%, 53%);
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.totalHeading {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: hsl(28deg, 10%, 53%);
+}
+
+.totalinfo {
+  font-size: 30px;
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+
+.totalText1 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: hsl(28deg, 10%, 53%);
+}
+
+.percent {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    min-width: 400px;
+  }
+  .table {
+    -ms-grid-columns: (10px)[7];
+    grid-template-columns: repeat(7, 10px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}

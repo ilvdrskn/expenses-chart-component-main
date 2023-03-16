@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="main">
+    <section class="balace">
+      <div class="textBalance">
+        <h2 class="balanceHeader">My balance</h2>
+        <p class="balanceCount">$921.48</p>
+      </div>
+
+      <img src="./images/logo.svg" alt="logo">
+    </section>
+  
+    <div class="info">
+      <section class="last7days"> 
+        <h2 class="last7daysHeading">
+          Spending - Last 7 days
+        </h2>
+    
+        <div class="table">
+          <div class="mon weekday">
+            <div class="overlay"></div>
+            <span class="day">mon</span>
+          </div>
+          <div class="tue weekday">
+            <div class="overlay tue"></div>
+            <span class="day">tue</span>
+          </div>
+          <div class="wed weekday">
+            <span class="day">wed</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="thu weekday">
+            <span class="day">thu</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="fri weekday">
+            <span class="day">fri</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="sat weekday">
+            <span class="day">sat</span>
+            <div class="overlay"></div>
+          </div>
+          <div class="sun weekday">
+            <span class="day">sun</span>
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="total">
+        <div class="totalText">
+          <h2 class="totalHeading">
+            Total this month
+          </h2>
+          <p class="totalinfo">
+            $478.33
+          </p>
+        </div>
+        
+      <div class="totalText1">
+        <span class="percent">+2.4%</span><br>
+        from last month
+      </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer class="foot">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+  <script src="data.json"></script>
+  <script src="logic.js"></script>
+</body>
+</html>
