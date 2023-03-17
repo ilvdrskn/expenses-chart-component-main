@@ -40,19 +40,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 100px;
 }
 
 .foot {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-self: flex-start;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .main {
@@ -109,7 +105,9 @@ body {
 }
 .weekday .day {
   position: absolute;
-  top: 100%;
+  bottom: 100%;
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
 }
 .weekday:hover {
   background-color: hsl(186deg, 34%, 60%);
@@ -118,17 +116,18 @@ body {
 .weekday:hover .overlay {
   display: block;
   position: absolute;
-  bottom: 120%;
+  top: 120%;
   background-color: hsl(25deg, 47%, 15%);
   color: #fff;
   padding: 5px 10px;
   font-size: 14px;
   border-radius: 5px;
-  -webkit-transform: translate(0);
-          transform: translate(0);
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
 }
 
 .table {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (50px)[7];
@@ -136,46 +135,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.mon {
-  height: 35px;
-  -webkit-transform: translateY(52px);
-          transform: translateY(52px);
-}
-
-.tue {
-  height: 70px;
-  -webkit-transform: translateY(19px);
-          transform: translateY(19px);
-}
-
-.wed {
-  height: 102px;
-  -webkit-transform: translateY(-11px);
-          transform: translateY(-11px);
-}
-
-.thu {
-  height: 62px;
-  -webkit-transform: translateY(26px);
-          transform: translateY(26px);
-}
-
-.fri {
-  height: 46px;
-  -webkit-transform: translateY(42px);
-          transform: translateY(42px);
-}
-
-.sat {
-  height: 86px;
-}
-
-.sun {
-  height: 50px;
-  -webkit-transform: translateY(32px);
-          transform: translateY(32px);
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .total {
@@ -215,13 +176,19 @@ body {
 
 @media screen and (max-width: 400px) {
   body {
-    min-width: 400px;
+    font-size: 16px;
+  }
+  .main {
+    min-width: 90%;
+    margin-bottom: 20px;
   }
   .table {
-    -ms-grid-columns: (10px)[7];
-    grid-template-columns: repeat(7, 10px);
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-grid-columns: (25px)[7];
+    grid-template-columns: repeat(7, 25px);
+  }
+  .foot {
+    position: relative;
+    bottom: 0;
+    left: 0;
   }
 }

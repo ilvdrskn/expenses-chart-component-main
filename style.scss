@@ -16,16 +16,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-wrap: wrap;
-    gap: 100px;
 }
 
 .foot {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    justify-content: flex-start;
+    justify-self: flex-start;
+    align-self: flex-end;
 }
 
 .main {
@@ -79,7 +76,8 @@ body {
 
     .day {
         position: absolute;
-        top: 100%;
+        bottom: 100%;
+        transform: rotateX(-180deg);
     }
 
     &:hover {
@@ -89,31 +87,28 @@ body {
         .overlay {
             display: block;
             position: absolute;
-            bottom: 120%;
+            top: 120%;
             background-color: $Darkbrown;
             color: #fff;
             padding: 5px 10px;
             font-size: 14px;
             border-radius: 5px;
-            transform: translate(0);
+            transform: rotateX(-180deg);
         }
     }
 
 }
 
 .table {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 50px);
     justify-content: space-between;
+    transform: rotateX(180deg);
 }
 
-.mon {height: 35px; transform: translateY(52px);}
-.tue {height: 70px; transform: translateY(19px);}
-.wed {height: 102px; transform: translateY(-11px);}
-.thu {height: 62px; transform: translateY(26px);}
-.fri {height: 46px; transform: translateY(42px);}
-.sat {height: 86px;}
-.sun {height: 50px; transform: translateY(32px);}
+
+
 
 .total {
     border-top: 1px solid $Mediumbrown;
@@ -146,13 +141,22 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-
     body {
-        min-width: 400px;
+        font-size: 16px;
     }
+
+    .main {
+        min-width: 90%;
+        margin-bottom: 20px;
+    }
+
     .table {
-        grid-template-columns: repeat(7, 10px);
-        justify-content: space-between;
+        grid-template-columns: repeat(7, 25px);
+    }
+
+    .foot {
+        position: relative;
+        bottom: 0; left: 0;
     }
 }
 
